@@ -1,5 +1,6 @@
 import React from 'react';
 import headStyle from "./Header.module.css";
+import { NavLink } from 'react-router-dom';
 
 const Head_func= () =>{
     return(
@@ -7,11 +8,21 @@ const Head_func= () =>{
             <img src="https://static.vecteezy.com/system/resources/previews/000/580/612/non_2x/star-logo-template-vector-icon-illustration.jpg" width="100px"/>
              <div>
                 <ul className={headStyle.menu}>
-                    <a href="" className="active"><li>Profile</li></a>
-                    <a href=""><li>News</li></a>
-                    <a href=""><li>Sms</li></a>
-                    <a href=""><li>Music</li></a>
-                    <a href=""><li>Settings</li></a>
+                    <li> 
+                        <NavLink to="/profile"  activeClassName={headStyle.active}>Profile</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/news" activeClassName={headStyle.active}>News</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/dialogs" activeClassName={headStyle.active}>Sms</NavLink>
+                    </li>
+                    <li> 
+                        <NavLink to="/music" activeClassName={headStyle.active}>Music</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/settings" activeClassName={headStyle.active}>Settings</NavLink>
+                    </li>
                 </ul>
              </div>   
         </div>
