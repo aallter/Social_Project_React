@@ -1,0 +1,8 @@
+.blockOneSms{
+    width:100%;
+    height:auto;
+}
+.blockOneSms p:first-child{
+    color:grey;
+    font-size: 16px;
+}

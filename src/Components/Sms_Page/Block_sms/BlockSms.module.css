@@ -1,0 +1,16 @@
+.blockForSms{
+    width:100%;
+    height:60%;
+    border:1px solid grey;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.MessageInput{
+    margin-top: 100px;
+}
+.MessageInput input:first-child{
+    width:70%;
+}
+.MessageInput input:nth-child(2){
+    width:20%;
+}
