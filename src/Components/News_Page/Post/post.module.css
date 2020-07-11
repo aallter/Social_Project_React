@@ -1,0 +1,8 @@
+.post{
+    box-sizing: border-box;
+    padding: 20px;
+    border:1px solid grey;
+}
+.post img{
+    border-radius: 50%;
+}
