@@ -10,17 +10,18 @@ import NewsPosts from './Components/News_Page/News';
 import MusicFunc from './Components/Music_Page/music';
 import Settings from './Components/Settings_Page/settings';
 
-function App() {
+function App(props) {
+
   return (
     <BrowserRouter>
       <div>
         <Head_func/>
         <div className="content">
-          <Route path='/dialogs' component={SmsPage}/>
-          <Route path='/profile' component={ProfileFull}/>
-          <Route path='/news' component={NewsPosts}/>
-          <Route path='/music' component={MusicFunc}/>
-          <Route path='/settings' component={Settings}/>
+          <Route path='/dialogs' render={()=><SmsPage arr_dialog_friend={props.arr_dialog_friend} arr_sms_one={props.arr_sms_one}/>}/>
+          <Route path='/profile' render={() =><ProfileFull arr_posts={props.arr_posts}/>}/>
+          <Route path='/news' render={() =><NewsPosts arr_posts={props.arr_posts}/>}/>
+          <Route path='/music' render={() =><MusicFunc arr_song={props.arr_song}/>}/>
+          <Route path='/settings' render={() =><Settings/>}/>
         </div>
         <FootDiv/>
       </div>

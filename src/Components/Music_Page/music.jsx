@@ -2,7 +2,7 @@ import React from 'react';
 import SongFunc from './songDiv';
 import musicStyle from "./music.module.css";
 
-const MusicFunc = () => {
+const MusicFunc = (props) => {
     return(
         <div>
             <div className={`${musicStyle.posit} ${musicStyle.player}`}>
@@ -18,11 +18,7 @@ const MusicFunc = () => {
                 <input type="submit" value="Search"/>
             </form>
 
-            <SongFunc/>
-            <SongFunc/>
-            <SongFunc/>
-            <SongFunc/>
-
+            <SongFunc arr_song={props.arr_song}/>
         </div>
     );
 }
