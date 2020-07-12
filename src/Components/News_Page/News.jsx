@@ -7,8 +7,6 @@ const NewsPosts = () => {
         <div>
             <h2>News Posts</h2>
            <Post/>
-           <Post/>
-           <Post/>
         </div>
     );
 }

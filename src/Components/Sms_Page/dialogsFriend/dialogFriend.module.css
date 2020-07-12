@@ -1,0 +1,9 @@
+.blockFriendDialog{
+    box-sizing: border-box;
+    padding: 5px;
+}
+.blockFriendDialog img{
+    width:80px;
+    height:80px;
+    border-radius: 5%;
+}

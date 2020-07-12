@@ -1,6 +1,10 @@
 .blockOneSms{
     width:100%;
     height:auto;
+    box-sizing: border-box;
+    padding: 1%;
+    background-color: rgb(237, 213, 211);
+    margin-top: 10px;
 }
 .blockOneSms p:first-child{
     color:grey;
