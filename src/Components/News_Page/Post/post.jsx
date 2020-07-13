@@ -4,7 +4,7 @@ import postStyle from './post.module.css';
 const Post = (props) =>{
 
 
-    let new_arr_posts = props.arr_posts.map(post_new => <BodyPost id={post_new.id} img={post_new.img} name={post_new.name} surname={post_new.surname} textCont={post_new.textCont}  like={post_new.like} comment={post_new.comment} />);
+    let new_arr_posts = props.arr_posts.map(post_new => <BodyPost id={post_new.id} textCont={post_new.textCont}  like={post_new.like} comment={post_new.comment} />);
 
     return(
         <div>
@@ -17,9 +17,9 @@ const BodyPost = (props) => {
     return(
         <div className={ postStyle.post}>
             <div >
-                <img src={props.img} width="100px"/>
-                <span>{props.name}</span>
-                <span>{props.surname}</span>
+                <img src="https://www.weclever.ru/img/actions/96495/1-650x350.jpg" width="100px"/>
+                <span>Alesha</span>
+                <span>Sidor</span>
             </div>
             <div>
                 <p> {props.textCont} </p>

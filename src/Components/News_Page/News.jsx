@@ -7,7 +7,7 @@ const NewsPosts = (props) => {
     return(
         <div>
             <h2>News Posts</h2>
-           <Post arr_posts={props.arr_posts}/>
+           <Post arr_posts={props.arr_posts} NewsPost={props.NewsPost}/>
         </div>
     );
 }

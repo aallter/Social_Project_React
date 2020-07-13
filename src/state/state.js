@@ -1,3 +1,4 @@
+import { renderTree } from "../render";
 
   let state = {
      arr_dialog_friend :[
@@ -6,10 +7,10 @@
         {id:"3", name:"Jhon" , img:"https://static.ngs.ru/news/preview/fe57768c1fb0bfecbc16ef286a81709400b2839b_599_399_c.jpg"}
       ],
      arr_posts :[
-        {id:"1" ,img:"https://static.ngs.ru/news/preview/fe57768c1fb0bfecbc16ef286a81709400b2839b_599_399_c.jpg" , name:"Sergio" , surname:"Jhet", textCont:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum rutrum varius. Aenean sodales elit quis odio mollis, ut mollis justo viverra. Mauris venenatis sem vel augue iaculis, in tempor quam egestas. Nullam in elit dignissim, iaculis libero quis, egestas tellus. Maecenas tristique consectetur consequat. Aliquam in urna varius, ornare magna eget, dapibus eros.", like:"4" ,comment:"1"},
-        {id:"2", img:"https://www.weclever.ru/img/actions/96495/1-650x350.jpg" , name:"Kate" , surname:"Lililo", textCont:"andit. Phasellus luctus, velit id condimentum cursus, erat sem vestibulum diam, quis consectetur ex mauris id massa. Vivamus id dui tortor. Vivamus tempus sem et elit egestas venenatis ac ac est. In vel accumsan ligula. Fusce tortor nisi, molestie sit amet molestie sit amet, venenatis eu velit. ", like:"23", comment:"1"},
-        {id:"3" ,img:"https://static.ngs.ru/news/preview/fe57768c1fb0bfecbc16ef286a81709400b2839b_599_399_c.jpg" , name:"Anastasia" , surname:"jhonir", textCont:"andit. Phasellus luctus, velit id condimentum cursus, erat sem vestibulum diam, quis consectetur ex mauris id massa. Vivamus id dui tortor. Vivamus tempus sem et elit egestas venenatis ac ac est. " ,like:"44" ,comment:"1"},
-        {id:"4", img:"https://bigpicture.ru/wp-content/uploads/2017/01/199.jpg" , name:"Vova" , surname:"Boom", textCont:"andit. Phasellus luctus, velit id condimentum cursus, erat ssan ligula. Fusce tortor nisi, molestie sit amet molestie sit amet, venenatis eu velit. " ,like:"12", comment:"1"}
+        {id:"1" , textCont:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vestibulum rutrum varius. Aenean sodales elit quis odio mollis, ut mollis justo viverra. Mauris venenatis sem vel augue iaculis, in tempor quam egestas. Nullam in elit dignissim, iaculis libero quis, egestas tellus. Maecenas tristique consectetur consequat. Aliquam in urna varius, ornare magna eget, dapibus eros.", like:"4" ,comment:"1"},
+        {id:"2", textCont:"andit. Phasellus luctus, velit id condimentum cursus, erat sem vestibulum diam, quis consectetur ex mauris id massa. Vivamus id dui tortor. Vivamus tempus sem et elit egestas venenatis ac ac est. In vel accumsan ligula. Fusce tortor nisi, molestie sit amet molestie sit amet, venenatis eu velit. ", like:"23", comment:"1"},
+        {id:"3" , textCont:"andit. Phasellus luctus, velit id condimentum cursus, erat sem vestibulum diam, quis consectetur ex mauris id massa. Vivamus id dui tortor. Vivamus tempus sem et elit egestas venenatis ac ac est. " ,like:"44" ,comment:"1"},
+        {id:"4",  textCont:"andit. Phasellus luctus, velit id condimentum cursus, erat ssan ligula. Fusce tortor nisi, molestie sit amet molestie sit amet, venenatis eu velit. " ,like:"12", comment:"1"}
       ],
      arr_sms_one :[
         {img:"https://thumb.tildacdn.com/tild6464-3562-4833-b037-613464353461/-/resize/824x/-/format/webp/photo.jpg", name:"Sergio",message:"Hi Man / How are you??"},
@@ -26,5 +27,16 @@
       ]
     
   };
+
+  export let NewPost =(addPost) => {
+    let mass_new_post ={
+      id:5,
+      textCont:addPost,
+      like:"0",
+      comment:"0"
+    }
+    state.arr_posts.push(mass_new_post);
+    renderTree(state);
+  }
 
   export default state;

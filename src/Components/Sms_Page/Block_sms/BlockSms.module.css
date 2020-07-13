@@ -8,9 +8,9 @@
 .MessageInput{
     margin-top: 100px;
 }
-.MessageInput input:first-child{
+.textArea{
     width:70%;
 }
-.MessageInput input:nth-child(2){
+.textArea+input{
     width:20%;
 }
